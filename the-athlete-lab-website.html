@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Athlete Lab | Where Potential Becomes Performance</title>
+<style>
+:root{--red:#e3232c;--black:#101114;--gray:#666}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#171717}
+a{text-decoration:none;color:inherit}.nav{position:sticky;top:0;z-index:10;background:var(--black);color:#fff;padding:17px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{font-weight:900;font-style:italic;font-size:22px;letter-spacing:-1px}.brand span,.red{color:var(--red)}
+.brand small{display:block;font:700 9px Arial;letter-spacing:2px;color:#aaa;margin-top:3px}
+nav{display:flex;gap:23px;align-items:center}nav a{font-size:11px;font-weight:800;letter-spacing:1px}nav a:hover{color:#ff555b}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 20px;font-size:11px;font-weight:900;letter-spacing:1px;border:0;cursor:pointer}
+.btn:hover{background:#bd171e}.outline{background:transparent;border:1px solid #888}
+.hero{min-height:510px;padding:95px 8%;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(8,9,11,.97),rgba(8,9,11,.72)),repeating-linear-gradient(135deg,#292a2e 0 2px,#17181b 2px 10px);position:relative;overflow:hidden}
+.hero>div{max-width:720px;position:relative;z-index:1}.eyebrow{font-size:11px;font-weight:900;letter-spacing:2.5px;color:var(--red)}
+h1{font-size:clamp(48px,8vw,88px);line-height:.96;letter-spacing:-4px;font-style:italic;margin:20px 0;font-weight:950}
+h2{font-size:clamp(29px,4vw,44px);line-height:1.05;letter-spacing:-1.5px;margin:12px 0;font-weight:950}
+p{line-height:1.75}.hero p{max-width:580px;color:#ccc;font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.strip{background:var(--red);color:#fff;display:flex;justify-content:space-around;gap:15px;flex-wrap:wrap;padding:17px;font-size:11px;font-weight:900;letter-spacing:1.5px}
+section{padding:75px 8%}.two{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.muted{color:var(--gray);font-size:14px}
+.statement{background:#101114;color:#fff;padding:38px}.statement strong{font-size:65px;color:var(--red);font-style:italic}.statement p{color:#bbb}
+.light{background:#f3f3f3}.center{text-align:center;max-width:680px;margin:0 auto 38px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#fff;border:1px solid #e3e3e3;padding:24px;transition:.2s}.card:hover{border-color:var(--red);transform:translateY(-3px)}
+.num{font-size:36px;font-weight:900;color:var(--red)}.card h3{font-size:17px;margin:15px 0 8px}.card p{font-size:13px;color:#666}
+.dark{background:#101114;color:#fff}.dark p{color:#bbb}.facility{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:32px}.facility article{background:#202125;border:1px solid #38393e;padding:23px}.facility .symbol{font-size:30px;color:var(--red)}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:1050px;margin:auto}.price{background:#f3f3f3;border-top:4px solid var(--red);padding:25px}.price h3{font-size:12px;letter-spacing:1px}.amount{font-size:34px;font-weight:950;margin:18px 0}.price p{font-size:13px;color:#666}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:24px}.value{display:flex;gap:15px}.check{color:var(--red);font-size:25px;font-weight:bold}
+form{background:#fff;color:#171717;padding:28px;box-shadow:0 3px 18px #0001}label{display:block;font-size:11px;font-weight:800;margin:13px 0 5px}input,select{width:100%;padding:13px;border:1px solid #ccc;font-size:14px}
+footer{background:#090a0c;color:#fff;padding:35px 8%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}footer small{color:#999}
+.menu-toggle{display:none;background:none;color:#fff;border:0;font-size:24px}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.prices{grid-template-columns:repeat(2,1fr)}.facility{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.nav{padding:15px 5%}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#101114;padding:20px;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu-toggle{display:block}.hero{min-height:470px;padding:75px 6%}h1{letter-spacing:-2px}section{padding:55px 6%}.two,.values{grid-template-columns:1fr}.cards,.prices,.facility{grid-template-columns:1fr}.strip{justify-content:center}footer{padding:30px 6%}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home">A<span>L</span><small>THE ATHLETE LAB · SPORTS PERFORMANCE</small></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+  <nav>
+    <a href="#about">ABOUT</a><a href="#programs">PROGRAMS</a><a href="#facility">FACILITY</a><a href="#pricing">PRICING</a><a class="btn" href="#contact">GET STARTED</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+ <div><div class="eyebrow">TRAIN HARDER. GET STRONGER. GO FURTHER.</div>
+ <h1>UNLOCK YOUR<br><span class="red">FULL POTENTIAL.</span></h1>
+ <p>More than a gym. A place where athletes of every age and skill level build strength, develop speed, and become better every day.</p>
+ <div class="actions"><a class="btn" href="#programs">EXPLORE PROGRAMS →</a><a class="btn outline" href="#about">DISCOVER OUR MISSION</a></div></div>
+</section>
+<div class="strip"><span>STRENGTH</span><span>SPEED</span><span>AGILITY</span><span>CONFIDENCE</span><span>PERFORMANCE</span></div>
+<section id="about" class="two">
+ <div><div class="eyebrow">WHO WE ARE</div><h2>BUILT TO HELP YOU<br><span class="red">BECOME BETTER.</span></h2>
+ <p class="muted">At The Athlete Lab, we believe every athlete has potential. Our mission is to create a positive and motivating environment where athletes of all ages and skill levels can train, improve, and reach their goals.</p>
+ <p class="muted">Whether you're just starting out or preparing for the next level of competition, we're here to help you become the best athlete you can be.</p><a class="btn" href="#contact">START YOUR JOURNEY →</a></div>
+ <div class="statement"><strong>100%</strong><h2>YOUR POTENTIAL.<br>YOUR JOURNEY.</h2><p>Training that meets you where you are and challenges you to get where you want to be.</p><b>ALL AGES. ALL SPORTS. ALL LEVELS.</b></div>
+</section>
+<section class="light" id="programs">
+ <div class="center"><div class="eyebrow">TRAIN YOUR WAY</div><h2>FIND YOUR <span class="red">EDGE.</span></h2><p class="muted">Programs designed to help every athlete improve their game.</p></div>
+ <div class="cards">
+  <article class="card"><div class="num">01</div><h3>STRENGTH TRAINING</h3><p>Build muscle, improve power, and develop a strong athletic foundation.</p></article>
+  <article class="card"><div class="num">02</div><h3>SPEED & AGILITY</h3><p>Improve acceleration, quickness, footwork, and overall movement.</p></article>
+  <article class="card"><div class="num">03</div><h3>SPORT-SPECIFIC</h3><p>Develop skills and athletic abilities that transfer to your sport.</p></article>
+  <article class="card"><div class="num">04</div><h3>GROUP TRAINING</h3><p>Train alongside others, stay motivated, and push toward shared goals.</p></article>
+ </div>
+</section>
+<section class="dark" id="facility">
+ <div class="eyebrow">THE ATHLETE LAB EXPERIENCE</div><h2>MORE THAN A <span class="red">WORKOUT.</span></h2><p>A training environment equipped to help athletes work on every part of their performance.</p>
+ <div class="facility">
+  <article><div class="symbol">▥</div><h3>WEIGHT ROOM</h3><p>Equipment for strength, conditioning, and power development.</p></article>
+  <article><div class="symbol">↗</div><h3>TURF TRAINING AREA</h3><p>Open space for drills, workouts, and sport-specific training.</p></article>
+  <article><div class="symbol">⇢</div><h3>SPEED & AGILITY ZONE</h3><p>Space and equipment to improve quickness and movement.</p></article>
+  <article><div class="symbol">◎</div><h3>PERSONAL TRAINING</h3><p>Individual attention and personalized training plans.</p></article>
+  <article><div class="symbol">▤</div><h3>LOCKER ROOMS</h3><p>Convenient facilities for athletes and visitors.</p></article>
+  <article><div class="symbol">＋</div><h3>ATHLETE SUPPORT</h3><p>A welcoming environment for athletes and families.</p></article>
+ </div>
+</section>
+<section id="pricing">
+ <div class="center"><div class="eyebrow">INVEST IN YOURSELF</div><h2>SIMPLE. <span class="red">AFFORDABLE.</span></h2><p class="muted">Training options that work for athletes and families.</p></div>
+ <div class="prices">
+  <article class="price"><h3>MONTHLY MEMBERSHIP</h3><div class="amount">$60 <small>/ month</small></div><p>Access to the training facility.</p><a class="btn" href="#contact">GET STARTED</a></article>
+  <article class="price"><h3>SINGLE TRAINING SESSION</h3><div class="amount">$20</div><p>A single training session.</p><a class="btn" href="#contact">BOOK A SESSION</a></article>
+  <article class="price"><h3>PERSONAL TRAINING</h3><div class="amount">$50</div><p>One-on-one coaching session.</p><a class="btn" href="#contact">GET STARTED</a></article>
+  <article class="price"><h3>GROUP TRAINING</h3><div class="amount">$15 <small>/ athlete</small></div><p>Group workout and training session.</p><a class="btn" href="#contact">JOIN A GROUP</a></article>
+  <article class="price"><h3>ATHLETE T-SHIRT</h3><div class="amount">$25</div><p>Represent The Athlete Lab.</p><a class="btn" href="#contact">SHOP NOW</a></article>
+  <article class="price"><h3>ATHLETE HOODIE</h3><div class="amount">$40</div><p>Take the brand with you.</p><a class="btn" href="#contact">SHOP NOW</a></article>
+ </div>
+ <p class="muted" style="text-align:center;font-size:12px;margin-top:25px">Family, team, and longer-membership discounts available. Prices shown are proposed mockup pricing.</p>
+</section>
+<section class="dark">
+ <div class="two"><div><div class="eyebrow">MORE THAN PERFORMANCE</div><h2>A PLACE FOR <span class="red">EVERY ATHLETE.</span></h2><p>Everyone deserves the opportunity to improve. We are committed to creating a welcoming environment regardless of age, experience, background, or ability.</p></div>
+ <div class="values">
+  <div class="value"><span class="check">✓</span><div><b>INCLUSIVE TRAINING</b><p>Options designed to welcome athletes with different abilities and needs.</p></div></div>
+  <div class="value"><span class="check">✓</span><div><b>SAFE ENVIRONMENT</b><p>Coaches respect individual limits and prioritize athlete safety.</p></div></div>
+  <div class="value"><span class="check">✓</span><div><b>COMMUNITY CONNECTION</b><p>Partnerships with schools, colleges, and local sports teams.</p></div></div>
+  <div class="value"><span class="check">✓</span><div><b>HONEST COACHING</b><p>Realistic goals, responsible training, and respect for athlete privacy.</p></div></div>
+ </div></div>
+</section>
+<section class="light" id="contact">
+ <div class="two"><div><div class="eyebrow">TAKE THE FIRST STEP</div><h2>READY TO GET <span class="red">STARTED?</span></h2><p class="muted">Your goals. Your hard work. Our support. Reach out to learn more about memberships, programs, and training opportunities.</p><div class="brand" style="margin-top:35px">THE ATHLETE LAB<span>.</span><small>WHERE POTENTIAL BECOMES PERFORMANCE.</small></div></div>
+ <form id="interest-form"><h3>LET'S CONNECT.</h3><label for="name">YOUR NAME</label><input id="name" required placeholder="Enter your name"><label for="email">EMAIL ADDRESS</label><input id="email" type="email" required placeholder="Enter your email"><label for="program">WHAT ARE YOU INTERESTED IN?</label><select id="program"><option>Monthly Membership</option><option>Personal Training</option><option>Group Training</option><option>Sport-Specific Training</option><option>Team Training</option><option>Merchandise</option></select><button class="btn" style="width:100%;margin-top:18px">SUBMIT INTEREST →</button><p id="form-message" class="muted" style="font-size:12px">Class project demo form. No information is sent.</p></form>
+ </div>
+</section>
+</main>
+<footer><div class="brand">THE ATHLETE LAB<span>.</span><small>WHERE POTENTIAL BECOMES PERFORMANCE.</small></div><small>INSTAGRAM &nbsp; | &nbsp; TIKTOK &nbsp; | &nbsp; FACEBOOK</small><small>© 2026 THE ATHLETE LAB · CONCEPT WEBSITE</small></footer>
+<script>
+document.getElementById('interest-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-message').textContent='Thanks! This is a class project demo. No information was sent.';document.getElementById('form-message').style.color='#16803d';});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+</script>
+</body>
+</html>
